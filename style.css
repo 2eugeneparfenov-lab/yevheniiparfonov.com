@@ -267,3 +267,161 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* 📱 Адаптація для планшетів */
+@media (max-width: 1024px) {
+    .upper {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .upper > .zoom-on-hover > a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .photo-text img,
+    .photo-text1 img {
+        max-width: 250px;
+        height: auto;
+    }
+
+    .project-item img {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .skills-grid {
+        display: grid; /* обов'язково */
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+        gap: 10px; /* відстань між елементами */
+    }
+    .skills-container {
+        display: flex; /* щоб центровані іконки */
+        justify-content: center;
+        align-items: center;
+    }
+    .skills-image {
+        max-width: 80px; /* підлаштувати під мобільний екран */
+        height: auto;
+    }
+}
+
+/* 📱 Адаптація для телефонів */
+@media (max-width: 429px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .lang-icon {
+        left: 85%;
+        width: 25px;
+        height: 25px;
+        margin-top: -12px;
+    }
+
+    .lang-icon1{
+        width: 25px;
+        height: 25px;
+        margin-top: 8px;
+        margin-left: -14px;
+    }
+
+    .upper-lang {
+        margin-top: 35px;
+        margin-left: 50px;
+        width: 15px;
+        height: 115px;
+
+    }
+
+    .time-upper{
+        display: none;
+    }
+
+    .upper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .photo-text img{
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+    }
+
+    .upper > .zoom-on-hover > a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 90px 15px 40px; /* менше відступів */
+    }
+
+    .photo-text1,
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .photo-text1 img{
+        border-radius: 50%;
+        width: 100%;
+        height: 250px;
+    }
+
+    .project-item img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text,
+    .project-text {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефонах */
+        gap: 10px;
+    }
+    .skills-container {
+        display: flex; /* щоб центровані іконки */
+        justify-content: center;
+        align-items: center;
+    }
+    .skills-image {
+        max-width: 80px; /* підлаштувати під мобільний екран */
+        height: auto;
+    }
+
+}
+
+/* 📱 Дуже маленькі екрани (наприклад iPhone SE) */
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-image {
+        width: 60px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
