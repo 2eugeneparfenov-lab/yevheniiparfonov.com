@@ -7,6 +7,12 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.time-upper {
+    position: fixed;
+    top: 25px;
+    right: 40px;
+}
+
 
 .skills-container{
     border-radius: 12px;
@@ -430,6 +436,7 @@ section {
         display: none;
     }
 }
+
 
 
 
