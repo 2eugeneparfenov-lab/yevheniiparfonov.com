@@ -326,11 +326,12 @@ section {
     }
 
     .lang-icon {
-        left: 85%;
-        top: 32%;
+        position: absolute;   /* тепер позиціонується відносно .upper */
+        right: 35px;           /* завжди зліва */
+        top: 50%;             /* ставимо по середині */
+        transform: translateY(-50%); /* центруємо */
         width: 25px;
         height: 25px;
-        /*margin-top: 7px;*/
     }
 
     .lang-icon1{
@@ -353,7 +354,7 @@ section {
     }
 
     .upper {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         transform: none;
