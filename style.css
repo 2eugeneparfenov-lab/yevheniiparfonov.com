@@ -320,7 +320,7 @@ section {
         align-items: center;
     }
     .skills-image {
-        max-width: 80px; /* підлаштувати під мобільний екран */
+        max-width: 80px;
         height: auto;
     }
     .time-upper{
@@ -328,11 +328,16 @@ section {
     }
 }
 
-/* 📱 Адаптація для телефонів */
 @media (max-width: 429px) {
     h2 {
         font-size: 24px;
     }
+
+    #about {
+        padding-top: 40px;
+    }
+
+
 
     .lang-icon {
         position: absolute;   /* тепер позиціонується відносно .upper */
@@ -344,18 +349,18 @@ section {
     }
 
     .lang-icon1{
-        padding: 3px;
+        padding: 5px;
         width: 25px;
         height: 25px;
         margin-top: 11px;
-        margin-left: -14px;
+        margin-left: -12px;
     }
 
     .upper-lang {
         position: absolute;
         top: 30%;
-        left: 81%;
-        width: 100px;
+        left: 78%;
+        width: 120px;
         height: 55px;
 
     }
