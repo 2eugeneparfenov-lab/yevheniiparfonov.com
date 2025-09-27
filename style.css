@@ -354,7 +354,7 @@ section {
     }
 
     .upper {
-        position: relative;
+        position: sticky;
         top: 0;
         left: 0;
         transform: none;
