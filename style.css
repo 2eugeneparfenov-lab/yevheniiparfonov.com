@@ -250,13 +250,13 @@ section {
 }
 
 .btn {
-    padding: 10px 20px;
+    font-weight: bold;
+    padding: 15px 25px;
     border: 2px solid #ffd700;
     color: #ffd700;
     background: transparent;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 .btn:hover {
@@ -286,7 +286,7 @@ section {
 
     .upper > .zoom-on-hover > a {
         margin: 10px;
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .photo-text img,
@@ -314,7 +314,7 @@ section {
         max-width: 80px; /* підлаштувати під мобільний екран */
         height: auto;
     }
-        .time-upper{
+    .time-upper{
         display: none;
     }
 }
@@ -329,7 +329,7 @@ section {
         left: 85%;
         width: 25px;
         height: 25px;
-        margin-top: -12px;
+        margin-top: 7px;
     }
 
     .lang-icon1{
@@ -357,7 +357,7 @@ section {
         left: 0;
         transform: none;
         width: 100%;
-        height: auto;
+        height: 60px;
         border-radius: 0;
         flex-wrap: wrap;
         justify-content: center;
@@ -371,7 +371,7 @@ section {
 
     .upper > .zoom-on-hover > a {
         margin: 5px 10px;
-        font-size: 14px;
+        font-size: 20px;
     }
 
     section {
@@ -403,22 +403,33 @@ section {
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефонах */
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     .skills-container {
-        display: flex; /* щоб центровані іконки */
+        display: flex;
         justify-content: center;
         align-items: center;
     }
     .skills-image {
-        max-width: 80px; /* підлаштувати під мобільний екран */
+        max-width: 80px;
         height: auto;
     }
 
 }
 
-/* 📱 Дуже маленькі екрани (наприклад iPhone SE) */
+@media (max-width: 429px) {
+    .upper {
+        flex-wrap: wrap;
+    }
+
+    .upper .zoom-on-hover:nth-child(4) {
+        flex-basis: 100%;
+        margin-top: 5px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 480px) {
     .skills-grid {
         grid-template-columns: 1fr;
@@ -432,11 +443,10 @@ section {
         padding: 8px 15px;
         font-size: 14px;
     }
-        .time-upper{
+    .time-upper{
         display: none;
     }
 }
-
 
 
 
