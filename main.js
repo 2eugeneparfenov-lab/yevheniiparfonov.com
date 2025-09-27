@@ -99,6 +99,8 @@ const translations = {
         project_text_2: "\"Slide-a-Lama\" is a dynamic arcade puzzle where players combine tiles to score as many points as possible. Simple mechanics and fast-paced gameplay make it engaging and competitive. With each new level, additional challenges and strategic opportunities appear.",
         project_text_3: "\"Solar Eclipse\" is a logic game with a Sun and Moon theme. Players must turn light tiles on and off to achieve complete harmony between light and shadow. As levels progress, tasks become more challenging, requiring focus and strategic thinking.",
         project_text_4: "\"Pac-Man\" is a classic arcade game where the player controls a character that collects all dots on the level while avoiding ghosts. The goal is to clear the maze and score as many points as possible using strategy and quick reflexes. As levels advance, speed and difficulty increase, making the game more engaging.",
+        tec: "Technologies used: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec1: "Technologies used: Java.",
         contact_title: "Contact",
         contact_email: "Email: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
@@ -118,6 +120,8 @@ const translations = {
         project_text_2: "\"Slide-a-Lama\" — це динамічна аркадна головоломка, де потрібно поєднувати плитки та набирати максимальну кількість балів. Прості механіки та швидкий темп роблять гру захопливою і змагальною. З кожним новим рівнем з’являються додаткові виклики та можливості для стратегії.",
         project_text_3: "\"Solar Eclipse\" — це логічна гра за тематикою Сонця та Місяця. Гравцеві потрібно вимикати й вмикати світлі плитки, щоб досягти повної гармонії між світлом і тінню. З кожним рівнем завдання стають складнішими, вимагаючи уважності та стратегічного мислення.",
         project_text_4: "\"Pac-Man\" — класична аркадна гра, де гравець керує персонажем, який збирає всі точки на рівні, уникаючи привидів. Мета — очистити лабіринт і набрати максимальну кількість балів, використовуючи стратегію та швидку реакцію. Зі зростанням рівнів швидкість і складність збільшуються, роблячи гру більш захопливою.",
+        tec: "Технології що були використані: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec1: "Технології що були використані: Java.",
         contact_title: "Контакти",
         contact_email: "Ел. пошта: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
@@ -137,6 +141,8 @@ const translations = {
         project_text_2: "\"Slide-a-Lama\" je dynamická arkádová logická hra, kde hráči kombinujú dlaždice, aby získali čo najviac bodov. Jednoduché mechaniky a rýchle tempo robia hru pútavou a súťažnou. S každou novou úrovňou sa objavujú ďalšie výzvy a strategické možnosti.",
         project_text_3: "\"Solar Eclipse\" je logická hra s témou Slnka a Mesiaca. Hráči musia zapínať a vypínať svetelné dlaždice, aby dosiahli úplnú harmóniu medzi svetlom a tieňom. S postupom úrovní sa úlohy stávajú náročnejšími, vyžadujúcimi sústredenie a strategické myslenie.",
         project_text_4: "\"Pac-Man\" je klasická arkádová hra, kde hráč ovláda postavu, ktorá zbiera všetky bodky na úrovni a vyhýba sa duchom. Cieľom je vyčistiť bludisko a získať čo najviac bodov pomocou stratégie a rýchlych reflexov. S postupom úrovní sa zvyšuje rýchlosť a náročnosť, čo robí hru ešte zábavnejšou.",        contact_title: "Kontakty",
+        tec: "Použité technológie: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec1: "Použité technológie: Java.",
         contact_email: "Email: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
     }
