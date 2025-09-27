@@ -275,13 +275,22 @@ section {
 }
 
 /* 📱 Адаптація для планшетів */
-@media (max-width: 1024px) {
+@media (max-width: 1081px) {
     .upper {
         width: 90%;
         height: auto;
         flex-wrap: wrap;
         justify-content: center;
         padding: 10px;
+    }
+
+    .lang-icon {
+        position: absolute;   /* тепер позиціонується відносно .upper */
+        right: 5%;           /* завжди зліва */
+        top: 50%;             /* ставимо по середині */
+        transform: translateY(-50%); /* центруємо */
+        width: 25px;
+        height: 25px;
     }
 
     .upper > .zoom-on-hover > a {
@@ -327,7 +336,7 @@ section {
 
     .lang-icon {
         position: absolute;   /* тепер позиціонується відносно .upper */
-        right: 35px;           /* завжди зліва */
+        right: 5%;           /* завжди зліва */
         top: 50%;             /* ставимо по середині */
         transform: translateY(-50%); /* центруємо */
         width: 25px;
@@ -335,17 +344,19 @@ section {
     }
 
     .lang-icon1{
+        padding: 3px;
         width: 25px;
         height: 25px;
-        margin-top: 8px;
+        margin-top: 11px;
         margin-left: -14px;
     }
 
     .upper-lang {
-        margin-top: 35px;
-        margin-left: 50px;
-        width: 15px;
-        height: 115px;
+        position: absolute;
+        top: 30%;
+        left: 81%;
+        width: 100px;
+        height: 55px;
 
     }
 
@@ -358,7 +369,7 @@ section {
         top: 0;
         left: 0;
         transform: none;
-        width: 100%;
+        width: 95%;
         height: 60px;
         border-radius: 0;
         flex-wrap: wrap;
