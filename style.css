@@ -354,12 +354,13 @@ section {
     .upper {
         position: fixed;
         top: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
+        left: 50%;
+        transform: translateX(-50%); /* зрушуємо назад на половину ширини */
+        width: 95%;
         height: 60px;
-        border-radius: 0;
+        border-radius: 50px;
         flex-wrap: wrap;
+        text-align: center;
         justify-content: center;
     }
 
