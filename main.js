@@ -105,6 +105,7 @@ const translations = {
         contact_email: "Email: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
     },
+
     ua: {
         upper_1: "Про мене",
         upper_2: "Навички",
