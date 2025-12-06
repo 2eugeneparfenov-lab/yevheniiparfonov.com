@@ -20,6 +20,42 @@ html, body {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+.contact-box {
+    padding: 40px;
+    margin: 0 auto 60px;
+    max-width: 1200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.contact-item {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-item span {
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #ffd700;
+}
+
+.contact-item a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 6px #ffd700;
+}
+
+
 .skills-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15px, 80px));
