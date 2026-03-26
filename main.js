@@ -117,15 +117,19 @@ const translations = {
         project_text_4: "\"Pac-Man\" is a classic arcade game where the player controls a character that collects all dots on the level while avoiding ghosts. The goal is to clear the maze and score as many points as possible using strategy and quick reflexes. As levels advance, speed and difficulty increase, making the game more engaging.",
         project_text_5: "\"BrainForge\" is an interactive educational web platform designed to teach programming through practical tasks and code analysis. Users solve problems of varying difficulty, write their own solutions, and receive immediate feedback. The platform helps develop logical thinking, analytical skills, and a structured approach to problem-solving.",
         project_text_6: "\"Simple Timer\" is a simple desktop application that allows users to set a timer for a specified time interval. The application features an intuitive user interface and is suitable for time tracking during study, work, and everyday tasks.",
-        tec: "Technologies used: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec: "Technologies used: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
         tec1: "Technologies used: Java.",
         contact_title: "Contact",
         contact_email: "Email: yourname@example.com",
-        contact_github: "GitHub: github.com/yourname"
+        contact_github: "GitHub: github.com/yourname",
+        tecGame: "Technologies used: C++ and Unity.",
+        project_text_7: "An atmospheric first-person horror adventure in which the player explores an isolated area, collects key items (a wheel, tools, a hammer), interacts with objects in the environment, and gradually regains the ability to escape while evading pursuers and reacting nervously to audio cues, with multiple endings depending on the player’s actions."
     },
 
 
     ua: {
+        tecGame: "Використані технології: C++ та Unity.",
+        project_text_7: "Атмосферна хоррор-пригода від першої особи, в якій гравець досліджує віддалену місцевість, збирає ключові предмети (колесо, інструменти, молоток), взаємодіє з об’єктами в оточенні та поступово відновлює здатність до втечі, уникаючи переслідувачів і нервово реагуючи на звукові сигнали; гра пропонує кілька варіантів фіналу залежно від дій гравця.",
         upper_1: "Про мене",
         upper_2: "Навички",
         upper_3: "Проєкти",
@@ -142,13 +146,15 @@ const translations = {
         project_text_4: "\"Pac-Man\" — класична аркадна гра, де гравець керує персонажем, який збирає всі точки на рівні, уникаючи привидів. Мета — очистити лабіринт і набрати максимальну кількість балів, використовуючи стратегію та швидку реакцію. Зі зростанням рівнів швидкість і складність збільшуються, роблячи гру більш захопливою.",
         project_text_5: "\"BrainForge\" — це інтерактивна навчальна вебплатформа для вивчення програмування через практичні завдання та аналіз помилок у коді. Користувачі розв’язують задачі різного рівня складності, пишуть власні рішення та одразу отримують результат. Платформа сприяє розвитку логічного мислення, аналітичних навичок і системного підходу до розв’язання задач.",
         project_text_6: "\"Simple Timer\" — це простий десктопний застосунок, який дозволяє користувачеві встановлювати таймер на заданий проміжок часу. Програма має інтуїтивний інтерфейс і підходить для відліку часу під час навчання, роботи та повсякденних завдань.",
-        tec: "Технології що були використані: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec: "Технології що були використані: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
         tec1: "Технології що були використані: Java.",
         contact_title: "Контакти",
         contact_email: "Ел. пошта: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
     },
     sk: {
+        tecGame: "Použité technológie: C++ a Unity.",
+        project_text_7: "Atmosférická hororová adventúra z pohľadu prvej osoby, v ktorej hráč preskúmava odľahlú oblasť, zbiera kľúčové predmety (koleso, náradie, kladivo), interaguje s objektmi v prostredí a postupne znovu získava schopnosť uniknúť, pričom sa vyhýba prenasledovateľom a nervózne reaguje na zvukové signály; hra ponúka viacero zakončení v závislosti od hráčových činov.",
         upper_1: "O mne",
         upper_2: "Schopnosti",
         upper_3: "Projekty",
@@ -165,7 +171,7 @@ const translations = {
         project_text_4: "\"Pac-Man\" je klasická arkádová hra, kde hráč ovláda postavu, ktorá zbiera všetky bodky na úrovni a vyhýba sa duchom. Cieľom je vyčistiť bludisko a získať čo najviac bodov pomocou stratégie a rýchlych reflexov. S postupom úrovní sa zvyšuje rýchlosť a náročnosť, čo robí hru ešte zábavnejšou.",        contact_title: "Kontakty",
         project_text_5: "\"BrainForge\" je interaktívna vzdelávacia webová platforma zameraná na výučbu programovania prostredníctvom praktických úloh a analýzy kódu. Používatelia riešia úlohy rôznej obtiažnosti, vytvárajú vlastné riešenia a získavajú okamžitú spätnú väzbu. Platforma podporuje rozvoj logického myslenia, analytických schopností a systematického riešenia problémov.",
         project_text_6: "\"Simple Timer\" je jednoduchá desktopová aplikácia, ktorá umožňuje používateľovi nastaviť časovač na zvolený časový interval. Aplikácia má intuitívne používateľské rozhranie a je vhodná na meranie času pri štúdiu, práci a každodenných úlohách.",
-        tec: "Použité technológie: Java, Spring Boot, PostgreSQL, HTML, CSS, JavaScript.",
+        tec: "Použité technológie: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
         tec1: "Použité technológie: Java.",
         contact_email: "Email: yourname@example.com",
         contact_github: "GitHub: github.com/yourname"
