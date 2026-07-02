@@ -231,3 +231,30 @@ function showDate() {
     document.getElementById("current-date").textContent = formatted;
 }
 window.addEventListener("DOMContentLoaded", showDate);
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll('.upper a[href^="#"]:not(#lang-toggle)');
+
+function activateMenuLink() {
+    let currentSectionId = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop - 180 && window.scrollY < sectionTop + sectionHeight - 180) {
+            currentSectionId = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", activateMenuLink);
+window.addEventListener("load", activateMenuLink);
