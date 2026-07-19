@@ -1,257 +1,587 @@
-document.querySelectorAll('.upper a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-const reveals = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); // запускається один раз
-        }
-    });
-}, { threshold: 0.2 }); // 20% елемента має бути видно
-
-reveals.forEach(reveal => {
-    observer.observe(reveal);
-});
-
-// document.body.style.overflow = "hidden";
-
-let photos = ["images/SE1.jpg", "images/SE2.jpg", "images/SE3.jpg", "images/SE4.jpg", "images/SE5.jpg", "images/SE6.jpg", "images/SE.png"];
-let index = -1;
-
-function nextImage(){
-    index = (index + 1) % photos.length;
-    document.getElementById("Eclipse").src = photos[index];
-}
-
-let photos1 = ["images/LA1.jpg", "images/LA2.jpg", "images/LA3.jpg", "images/LA4.jpg", "images/LA5.jpg", "images/LA6.jpg", "images/SAL.png"];
-let index1 = -1;
-
-function nextImage1(){
-    index1 = (index1 + 1) % photos1.length;
-    document.getElementById("Lama").src = photos1[index1];
-}
-
-let photosPacMan = ["images/PC1.png", "images/PC2.png", "images/PC3.png", "images/PC4.png", "images/PC5.png", "images/PacMan.png"];
-let indexPacMan = -1;
-
-function nextImagePacMan(){
-    indexPacMan = (indexPacMan + 1) % photosPacMan.length;
-    document.getElementById("PacMan").src = photosPacMan[indexPacMan];
-}
-
-let photosBrainForge = ["images/img_2.png", "images/img_3.png", "images/img_4.png", "images/img_5.png", "images/img_6.png", "images/img_7.png", "images/img_8.png", "images/img_9.png", "images/img_10.png", "images/img_11.png", "images/img_12.png", "images/img_13.png", "images/img_14.png", "images/img_15.png", "images/img_1.png"];
-let indexBrainForge = -1;
-
-function nextImageBrainForge(){
-    indexBrainForge = (indexBrainForge + 1) % photosBrainForge.length;
-    document.getElementById("BrainForge").src = photosBrainForge[indexBrainForge];
-}
-
-let photosTimer = ["images/timer1.png", "images/timer2.png", "images/timer3.png", "images/timer.png"];
-let indexTimer = -1;
-
-function nextImageTimer(){
-    indexTimer = (indexTimer + 1) % photosTimer.length;
-    document.getElementById("SmartClock").src = photosTimer[indexTimer];
-}
-
-window.addEventListener("scroll", function() {
-    let reveals = document.querySelectorAll(".reveal");
-    for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        }
-    }
-});
-
-const langToggle = document.getElementById("lang-toggle");
-const langMenu = document.getElementById("lang-menu");
-
-langToggle.addEventListener("click", function(event) {
-    event.preventDefault();
-    event.stopPropagation(); // щоб клік не пішов далі на document
-    if (window.getComputedStyle(langMenu).display === "none") {
-        langMenu.style.display = "block";
-    } else {
-        langMenu.style.display = "none";
-    }
-});
-
-document.addEventListener("click", function(event) {
-    if (!langMenu.contains(event.target) && event.target !== langToggle) {
-        langMenu.style.display = "none";
-    }
-});
-
 const translations = {
     en: {
-        upper_1: "About me",
-        upper_2: "Skills",
-        upper_3: "Projects",
-        upper_4: "Contacts",
-        about_title: "Hello, I'm Yevhenii 👋",
-        about_text: "Welcome to my personal website. I have successfully completed my studies in Informatics at TUKE in Košice, Slovakia. I am passionate about programming and backend development, especially writing code in Java and building applications using Spring Boot. I also have experience designing efficient databases with PostgreSQL and integrating them into real projects.",        about_text1: "My goal is to become a professional developer and work on innovative projects. Feel free to explore my portfolio and get in touch if you are interested in collaboration!",
-        skills_title: "My Skills",
-        skills_intro: "Over the past years, I have gained experience with different programming languages and technologies. \n" +
-            "    My main focus is on Java, where I enjoy building applications and exploring backend development. \n" +
-            "    I also worked with C, which helps me better understand low-level programming and problem solving. \n" +
-            "    For web applications, I use Spring Boot together with PostgreSQL to create efficient and scalable backend systems. \n" +
-            "    On the frontend side, I am confident with HTML5, CSS3, and JavaScript to build responsive and modern user interfaces.",
-        projects_title: "Projects",
-        project_text_1: "\"Alien Fighter\" is a 2D adventure where the player controls Ellen Ripley from the Alien movie series, exploring and progressing through an abandoned space station infested with aliens. The game features a combat system, a resource collection system, and gradual usage of resources. The main goal is to survive while eliminating as many aliens as possible along the way.",
-        project_text_2: "\"Slide-a-Lama\" is a dynamic arcade puzzle where players combine tiles to score as many points as possible. Simple mechanics and fast-paced gameplay make it engaging and competitive. With each new level, additional challenges and strategic opportunities appear.",
-        project_text_3: "\"Solar Eclipse\" is a logic game with a Sun and Moon theme. Players must turn light tiles on and off to achieve complete harmony between light and shadow. As levels progress, tasks become more challenging, requiring focus and strategic thinking.",
-        project_text_4: "\"Pac-Man\" is a classic arcade game where the player controls a character that collects all dots on the level while avoiding ghosts. The goal is to clear the maze and score as many points as possible using strategy and quick reflexes. As levels advance, speed and difficulty increase, making the game more engaging.",
-        project_text_5: "\"BrainForge\" is an interactive educational web platform designed to teach programming through practical tasks and code analysis. Users solve problems of varying difficulty, write their own solutions, and receive immediate feedback. The platform helps develop logical thinking, analytical skills, and a structured approach to problem-solving.",
-        project_text_6: "\"Simple Timer\" is a simple desktop application that allows users to set a timer for a specified time interval. The application features an intuitive user interface and is suitable for time tracking during study, work, and everyday tasks.",
-        tec_bp: "Technologies used: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
-        tec: "Technologies used: Java, Spring Boot, PostgreSQL, Thymleaf, HTML, CSS, JavaScript.",
-        tec1: "Technologies used: Java.",
-        contact_title: "Contact",
-        contact_email: "Email: yourname@example.com",
-        contact_github: "GitHub: github.com/yourname",
-        tecGame: "Technologies used: C++ and Unity.",
-        project_text_7: "An atmospheric first-person horror adventure in which the player explores an isolated area, collects key items (a wheel, tools, a hammer), interacts with objects in the environment, and gradually regains the ability to escape while evading pursuers and reacting nervously to audio cues, with multiple endings depending on the player’s actions."
-    },
-
-
-    ua: {
-        tecGame: "Використані технології: C++ та Unity.",
-        project_text_7: "Атмосферна хоррор-пригода від першої особи, в якій гравець досліджує віддалену місцевість, збирає ключові предмети (колесо, інструменти, молоток), взаємодіє з об’єктами в оточенні та поступово відновлює здатність до втечі, уникаючи переслідувачів і нервово реагуючи на звукові сигнали; гра пропонує кілька варіантів фіналу залежно від дій гравця.",
-        upper_1: "Про мене",
-        upper_2: "Навички",
-        upper_3: "Проєкти",
-        upper_4: "Контактна інформація",
-        about_title: "Привіт, я Євгеній 👋",
-        about_text: "Вітаю на моєму персональному вебсайті. Я успішно завершив навчання за спеціальністю Informatika в TUKE у Кошицях, Словаччина. Я цікавлюся програмуванням і backend-розробкою, особливо написанням коду на Java та створенням застосунків за допомогою Spring Boot. Також маю досвід проєктування ефективних баз даних у PostgreSQL та їх інтеграції в реальні проєкти.",        about_text1: "Моя мета — стати професійним розробником і працювати над інноваційними проєктами. Запрошую вас ознайомитися з моїм портфоліо та зв’язатися зі мною, якщо ви зацікавлені у співпраці!",
-        skills_title: "Мої навички",
-        skills_intro: "За останні роки я набув досвіду роботи з різними мовами програмування та технологіями. Мій основний напрямок — Java, де я із задоволенням створюю застосунки та досліджую бекенд-розробку. Також я працював із C, що допомагає краще розуміти низькорівневе програмування та розв’язання задач. Для вебзастосунків я використовую Spring Boot разом із PostgreSQL, щоб створювати ефективні й масштабовані бекенд-системи. На фронтенді я впевнено працюю з HTML5, CSS3 та JavaScript для розробки адаптивних і сучасних інтерфейсів.",
-        projects_title: "Проєкти",
-        project_text_1: "\"Alien Fighter\" - це 2D пригода, де гравець керує персонажем Ellen Ripley з серії фільмів \"Чужий\", досліджуючи та просуваючись вглиб занедбаної космічної станції що кишить прибульцями. Гра містить бойову систему, систему збору ресурсів та поступового їх використання. Основна ціль - врятуватись, паралельно вбивши якомога більше прибульців на шляху.  ",
-        project_text_2: "\"Slide-a-Lama\" — це динамічна аркадна головоломка, де потрібно поєднувати плитки та набирати максимальну кількість балів. Прості механіки та швидкий темп роблять гру захопливою і змагальною. З кожним новим рівнем з’являються додаткові виклики та можливості для стратегії.",
-        project_text_3: "\"Solar Eclipse\" — це логічна гра за тематикою Сонця та Місяця. Гравцеві потрібно вимикати й вмикати світлі плитки, щоб досягти повної гармонії між світлом і тінню. З кожним рівнем завдання стають складнішими, вимагаючи уважності та стратегічного мислення.",
-        project_text_4: "\"Pac-Man\" — класична аркадна гра, де гравець керує персонажем, який збирає всі точки на рівні, уникаючи привидів. Мета — очистити лабіринт і набрати максимальну кількість балів, використовуючи стратегію та швидку реакцію. Зі зростанням рівнів швидкість і складність збільшуються, роблячи гру більш захопливою.",
-        project_text_5: "\"BrainForge\" — це інтерактивна навчальна вебплатформа для вивчення програмування через практичні завдання та аналіз помилок у коді. Користувачі розв’язують задачі різного рівня складності, пишуть власні рішення та одразу отримують результат. Платформа сприяє розвитку логічного мислення, аналітичних навичок і системного підходу до розв’язання задач.",
-        project_text_6: "\"Simple Timer\" — це простий десктопний застосунок, який дозволяє користувачеві встановлювати таймер на заданий проміжок часу. Програма має інтуїтивний інтерфейс і підходить для відліку часу під час навчання, роботи та повсякденних завдань.",
-        tec: "Технології що були використані: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
-        tec1: "Технології що були використані: Java.",
-        contact_title: "Контакти",
-        contact_email: "Ел. пошта: yourname@example.com",
-        contact_github: "GitHub: github.com/yourname"
+        pageTitle: "Yevhenii Parfonov | Java Developer",
+        navAbout: "About",
+        navProjects: "Projects",
+        navSkills: "Skills",
+        navContact: "Contact",
+        heroEyebrow: "Java Backend Developer",
+        heroTitle: "I build reliable applications with Java and Spring Boot.",
+        heroLead: "Informatics graduate focused on backend development, database design and practical software products.",
+        viewProjects: "View projects",
+        contactMe: "Contact me",
+        factBackend: "Backend focus",
+        factWeb: "Web applications",
+        factDatabase: "Data modelling",
+        profileStatus: "Open to junior Java opportunities",
+        profileLocation: "Slovakia",
+        projectsEyebrow: "Selected work",
+        projectsTitle: "Projects",
+        projectsIntro: "A concise overview of the products, technical decisions and core functionality I implemented.",
+        skillsEyebrow: "Technical profile",
+        skillsTitle: "Skills",
+        skillsIntro: "My strongest area is Java backend development, supported by database, frontend and desktop development experience.",
+        backendTitle: "Backend",
+        databaseTitle: "Data & infrastructure",
+        frontendTitle: "Frontend",
+        additionalTitle: "Additional",
+        contactEyebrow: "Get in touch",
+        contactTitle: "Let’s discuss a development opportunity.",
+        contactIntro: "I am interested in junior Java backend and full-stack positions where I can contribute and continue developing professionally.",
+        backToTop: "Back to top ↑",
+        implementation: "Key implementation",
+        nextScreenshot: "Next screenshot",
+        liveDemo: "Live demo",
+        videoDemo: "Video demo",
+        sourceCode: "Source code",
+        featured: "Featured project",
+        thesis: "Bachelor’s thesis",
+        types: {
+            platform: "Web platform",
+            webGame: "Browser game",
+            desktopGame: "Desktop game",
+            desktopApp: "Desktop app",
+            unityGame: "Unity game"
+        }
     },
     sk: {
-        tecGame: "Použité technológie: C++ a Unity.",
-        project_text_7: "Atmosférická hororová adventúra z pohľadu prvej osoby, v ktorej hráč preskúmava odľahlú oblasť, zbiera kľúčové predmety (koleso, náradie, kladivo), interaguje s objektmi v prostredí a postupne znovu získava schopnosť uniknúť, pričom sa vyhýba prenasledovateľom a nervózne reaguje na zvukové signály; hra ponúka viacero zakončení v závislosti od hráčových činov.",
-        upper_1: "O mne",
-        upper_2: "Schopnosti",
-        upper_3: "Projekty",
-        upper_4: "Kontakty",
-        about_title: "Ahoj, som Yevhenii 👋",
-        about_text: "Vitajte na mojej osobnej webovej stránke. Úspešne som ukončil štúdium informatiky na TUKE v Košiciach na Slovensku. Zaujímam sa o programovanie a backendový vývoj, najmä o písanie kódu v jazyku Java a tvorbu aplikácií pomocou Spring Boot. Mám tiež skúsenosti s návrhom efektívnych databáz v PostgreSQL a ich integráciou do reálnych projektov.",        about_text1: "Mojím cieľom je stať sa profesionálnym vývojárom a pracovať na inovatívnych projektoch. Pozývam vás, aby ste si prezreli moje portfólio a kontaktovali ma, ak máte záujem o spoluprácu!",
-        skills_title: "Moje zručnosti",
-        skills_intro: "Počas uplynulých rokov som získal skúsenosti s rôznymi programovacími jazykmi a technológiami. Mojím hlavným zameraním je Java, kde rád vytváram aplikácie a skúmam vývoj backendu. Pracoval som aj s jazykom C, čo mi pomáha lepšie porozumieť nízkoúrovňovému programovaniu a riešeniu problémov. Pri webových aplikáciách používam Spring Boot spolu s PostgreSQL na tvorbu efektívnych a škálovateľných backend systémov. Na frontende sebavedomo pracujem s HTML5, CSS3 a JavaScriptom na tvorbu responzívnych a moderných používateľských rozhraní.",
-        projects_title: "Projekty",
-        project_text_1: "\"Alien Fighter\" je 2D dobrodružná hra, kde hráč ovláda Ellen Ripley zo série filmov Alien, preskúmava a postupuje v opustenej vesmírnej stanici plnej mimozemšťanov. Hra obsahuje bojový systém, systém zbierania zdrojov a ich postupné využívanie. Hlavným cieľom je prežiť a zároveň eliminovať čo najviac mimozemšťanov po ceste.",
-        project_text_2: "\"Slide-a-Lama\" je dynamická arkádová logická hra, kde hráči kombinujú dlaždice, aby získali čo najviac bodov. Jednoduché mechaniky a rýchle tempo robia hru pútavou a súťažnou. S každou novou úrovňou sa objavujú ďalšie výzvy a strategické možnosti.",
-        project_text_3: "\"Solar Eclipse\" je logická hra s témou Slnka a Mesiaca. Hráči musia zapínať a vypínať svetelné dlaždice, aby dosiahli úplnú harmóniu medzi svetlom a tieňom. S postupom úrovní sa úlohy stávajú náročnejšími, vyžadujúcimi sústredenie a strategické myslenie.",
-        project_text_4: "\"Pac-Man\" je klasická arkádová hra, kde hráč ovláda postavu, ktorá zbiera všetky bodky na úrovni a vyhýba sa duchom. Cieľom je vyčistiť bludisko a získať čo najviac bodov pomocou stratégie a rýchlych reflexov. S postupom úrovní sa zvyšuje rýchlosť a náročnosť, čo robí hru ešte zábavnejšou.",        contact_title: "Kontakty",
-        project_text_5: "\"BrainForge\" je interaktívna vzdelávacia webová platforma zameraná na výučbu programovania prostredníctvom praktických úloh a analýzy kódu. Používatelia riešia úlohy rôznej obtiažnosti, vytvárajú vlastné riešenia a získavajú okamžitú spätnú väzbu. Platforma podporuje rozvoj logického myslenia, analytických schopností a systematického riešenia problémov.",
-        project_text_6: "\"Simple Timer\" je jednoduchá desktopová aplikácia, ktorá umožňuje používateľovi nastaviť časovač na zvolený časový interval. Aplikácia má intuitívne používateľské rozhranie a je vhodná na meranie času pri štúdiu, práci a každodenných úlohách.",
-        tec: "Použité technológie: Java, Spring Boot, PostgreSQL, Docker, ChatGPT API, Thymleaf, HTML, CSS, JavaScript.",
-        tec1: "Použité technológie: Java.",
-        contact_email: "Email: yourname@example.com",
-        contact_github: "GitHub: github.com/yourname"
+        pageTitle: "Yevhenii Parfonov | Java vývojár",
+        navAbout: "O mne",
+        navProjects: "Projekty",
+        navSkills: "Zručnosti",
+        navContact: "Kontakt",
+        heroEyebrow: "Java Backend Developer",
+        heroTitle: "Tvorím spoľahlivé aplikácie v Jave a Spring Boote.",
+        heroLead: "Absolvent informatiky so zameraním na backendový vývoj, návrh databáz a praktické softvérové produkty.",
+        viewProjects: "Zobraziť projekty",
+        contactMe: "Kontaktovať ma",
+        factBackend: "Backendové zameranie",
+        factWeb: "Webové aplikácie",
+        factDatabase: "Dátové modelovanie",
+        profileStatus: "Otvorený junior Java príležitostiam",
+        profileLocation: "Slovensko",
+        projectsEyebrow: "Vybrané práce",
+        projectsTitle: "Projekty",
+        projectsIntro: "Stručný prehľad produktov, technických rozhodnutí a hlavných funkcií, ktoré som implementoval.",
+        skillsEyebrow: "Technický profil",
+        skillsTitle: "Zručnosti",
+        skillsIntro: "Mojou najsilnejšou oblasťou je Java backend, doplnený skúsenosťami s databázami, frontendom a desktopovými aplikáciami.",
+        backendTitle: "Backend",
+        databaseTitle: "Dáta a infraštruktúra",
+        frontendTitle: "Frontend",
+        additionalTitle: "Ďalšie technológie",
+        contactEyebrow: "Kontakt",
+        contactTitle: "Poďme prediskutovať pracovnú príležitosť.",
+        contactIntro: "Mám záujem o junior Java backend alebo full-stack pozície, na ktorých môžem prispieť a ďalej sa profesionálne rozvíjať.",
+        backToTop: "Späť hore ↑",
+        implementation: "Kľúčová implementácia",
+        nextScreenshot: "Ďalší obrázok",
+        liveDemo: "Živé demo",
+        videoDemo: "Video ukážka",
+        sourceCode: "Zdrojový kód",
+        featured: "Hlavný projekt",
+        thesis: "Bakalárska práca",
+        types: {
+            platform: "Webová platforma",
+            webGame: "Webová hra",
+            desktopGame: "Desktopová hra",
+            desktopApp: "Desktopová aplikácia",
+            unityGame: "Unity hra"
+        }
+    },
+    ua: {
+        pageTitle: "Yevhenii Parfonov | Java розробник",
+        navAbout: "Про мене",
+        navProjects: "Проєкти",
+        navSkills: "Навички",
+        navContact: "Контакти",
+        heroEyebrow: "Java Backend Developer",
+        heroTitle: "Я створюю надійні застосунки на Java та Spring Boot.",
+        heroLead: "Випускник інформатики, зосереджений на backend-розробці, проєктуванні баз даних і практичних програмних продуктах.",
+        viewProjects: "Переглянути проєкти",
+        contactMe: "Зв’язатися",
+        factBackend: "Backend-напрямок",
+        factWeb: "Вебзастосунки",
+        factDatabase: "Моделювання даних",
+        profileStatus: "Відкритий до junior Java пропозицій",
+        profileLocation: "Словаччина",
+        projectsEyebrow: "Вибрані роботи",
+        projectsTitle: "Проєкти",
+        projectsIntro: "Стислий огляд продуктів, технічних рішень і ключових функцій, які я реалізував.",
+        skillsEyebrow: "Технічний профіль",
+        skillsTitle: "Навички",
+        skillsIntro: "Мій основний напрямок — Java backend, доповнений досвідом роботи з базами даних, frontend і desktop-застосунками.",
+        backendTitle: "Backend",
+        databaseTitle: "Дані та інфраструктура",
+        frontendTitle: "Frontend",
+        additionalTitle: "Додаткові технології",
+        contactEyebrow: "Контакти",
+        contactTitle: "Обговорімо можливість співпраці.",
+        contactIntro: "Мене цікавлять junior Java backend і full-stack позиції, де я зможу бути корисним та професійно розвиватися.",
+        backToTop: "Повернутися вгору ↑",
+        implementation: "Ключова реалізація",
+        nextScreenshot: "Наступне зображення",
+        liveDemo: "Демо",
+        videoDemo: "Відеодемонстрація",
+        sourceCode: "Вихідний код",
+        featured: "Головний проєкт",
+        thesis: "Бакалаврська робота",
+        types: {
+            platform: "Вебплатформа",
+            webGame: "Браузерна гра",
+            desktopGame: "Desktop-гра",
+            desktopApp: "Desktop-застосунок",
+            unityGame: "Гра на Unity"
+        }
     }
 };
 
-document.getElementById("ukraine").addEventListener("click", function(e){
-    e.preventDefault();
-    setLanguage("ua");
-});
-document.getElementById("america").addEventListener("click", function(e){
-    e.preventDefault();
-    setLanguage("en");
-});
-document.getElementById("slovakia").addEventListener("click", function(e){
-    e.preventDefault();
-    setLanguage("sk");
-});
+const projects = [
+    {
+        id: "brainforge",
+        title: "BrainForge",
+        type: "platform",
+        featured: true,
+        badge: "thesis",
+        image: "images/img_1.png",
+        gallery: [
+            "images/img_1.png", "images/img_2.png", "images/img_3.png", "images/img_4.png",
+            "images/img_5.png", "images/img_6.png", "images/img_7.png", "images/img_8.png",
+            "images/img_9.png", "images/img_10.png", "images/img_11.png", "images/img_12.png",
+            "images/img_13.png", "images/img_14.png", "images/img_15.png"
+        ],
+        technologies: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "JPA", "Hibernate", "Docker", "Thymeleaf", "OpenAI API"],
+        links: [
+            { kind: "videoDemo", url: "https://www.youtube.com/watch?v=uUaL2kCP9lU", primary: true },
+            { kind: "sourceCode", url: "https://git.kpi.fei.tuke.sk/kpi-zp/2026/bp.yevhenii.parfonov/workspace/umela-inteligencia-vo-vzdelavani-projekt" }
+        ],
+        text: {
+            en: {
+                summary: "An educational web platform for solving programming tasks in Java, Python and C with automated feedback.",
+                features: [
+                    "Built source-code execution and automated verification against test cases.",
+                    "Implemented authentication, role-based authorization and a structured data model.",
+                    "Added progress tracking, streaks, statistics, saved tasks and contextual AI hints."
+                ]
+            },
+            sk: {
+                summary: "Vzdelávacia webová platforma na riešenie programátorských úloh v Jave, Pythone a C s automatickou spätnou väzbou.",
+                features: [
+                    "Vytvoril som spúšťanie zdrojového kódu a automatické overovanie pomocou testovacích prípadov.",
+                    "Implementoval som autentifikáciu, oprávnenia podľa rolí a štruktúrovaný dátový model.",
+                    "Pridal som sledovanie pokroku, série, štatistiky, uložené úlohy a kontextové AI nápovedy."
+                ]
+            },
+            ua: {
+                summary: "Навчальна вебплатформа для розв’язання задач на Java, Python і C з автоматизованою перевіркою.",
+                features: [
+                    "Реалізував запуск вихідного коду та автоматичну перевірку за тест-кейсами.",
+                    "Створив автентифікацію, рольову авторизацію та структуровану модель даних.",
+                    "Додав прогрес, серії активності, статистику, збережені задачі та контекстні AI-підказки."
+                ]
+            }
+        }
+    },
+    {
+        id: "slide-a-lama",
+        title: "Slide-a-Lama",
+        type: "webGame",
+        image: "images/SAL.png",
+        gallery: ["images/SAL.png", "images/LA1.jpg", "images/LA2.jpg", "images/LA3.jpg", "images/LA4.jpg", "images/LA5.jpg", "images/LA6.jpg"],
+        technologies: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "JPA", "Thymeleaf", "JavaScript"],
+        links: [
+            { kind: "videoDemo", url: "https://www.youtube.com/watch?v=uUaL2kCP9lU", primary: true },
+            { kind: "sourceCode", url: "https://github.com/2eugeneparfenov-lab/slide-a-lama" }
+        ],
+        text: {
+            en: {
+                summary: "A browser puzzle game with persistent accounts, game history and competitive score tracking.",
+                features: [
+                    "Developed move-processing logic and score calculation.",
+                    "Implemented registration, authentication and completed-game history.",
+                    "Designed user, game and score entities with a persistent leaderboard."
+                ]
+            },
+            sk: {
+                summary: "Webová logická hra s používateľskými účtami, históriou hier a porovnávaním výsledkov.",
+                features: [
+                    "Vytvoril som logiku spracovania ťahov a výpočtu skóre.",
+                    "Implementoval som registráciu, prihlásenie a históriu dokončených hier.",
+                    "Navrhol som entity používateľov, hier a skóre spolu s rebríčkom."
+                ]
+            },
+            ua: {
+                summary: "Браузерна головоломка з обліковими записами, історією ігор і таблицею результатів.",
+                features: [
+                    "Розробив backend-логіку обробки ходів і підрахунку балів.",
+                    "Реалізував реєстрацію, автентифікацію та історію завершених ігор.",
+                    "Спроєктував сутності користувачів, ігор і результатів із таблицею лідерів."
+                ]
+            }
+        }
+    },
+    {
+        id: "solar-eclipse",
+        title: "Solar Eclipse",
+        type: "webGame",
+        image: "images/SE.png",
+        gallery: ["images/SE.png", "images/SE1.jpg", "images/SE2.jpg", "images/SE3.jpg", "images/SE4.jpg", "images/SE5.jpg", "images/SE6.jpg"],
+        technologies: ["Java", "Spring Boot", "PostgreSQL", "JPA", "Thymeleaf", "JavaScript"],
+        links: [
+            { kind: "videoDemo", url: "https://www.youtube.com/watch?v=XP8CPtc-eKM&t=6s", primary: true },
+            { kind: "sourceCode", url: "https://github.com/2eugeneparfenov-lab/Solar-Eclipse" }
+        ],
+        text: {
+            en: {
+                summary: "A browser logic game built around tile switching, level progression and persistent user progress.",
+                features: [
+                    "Implemented tile-switching rules and level-completion validation.",
+                    "Added multiple difficulties, a timer and move counting.",
+                    "Built saving and restoring of user progress and game results."
+                ]
+            },
+            sk: {
+                summary: "Webová logická hra založená na prepínaní dlaždíc, postupe úrovňami a ukladaní pokroku.",
+                features: [
+                    "Implementoval som pravidlá prepínania dlaždíc a overenie dokončenia úrovne.",
+                    "Pridal som viacero náročností, časovač a počítadlo ťahov.",
+                    "Vytvoril som ukladanie a obnovenie pokroku používateľa a výsledkov hier."
+                ]
+            },
+            ua: {
+                summary: "Браузерна логічна гра з перемиканням плиток, рівнями складності та збереженням прогресу.",
+                features: [
+                    "Реалізував логіку перемикання плиток і перевірку завершення рівня.",
+                    "Додав різні рівні складності, таймер і лічильник ходів.",
+                    "Створив збереження та відновлення прогресу користувача й результатів."
+                ]
+            }
+        }
+    },
+    {
+        id: "alien-fighter",
+        title: "Alien Fighter",
+        type: "desktopGame",
+        image: "images/Elen.jpg",
+        gallery: [],
+        technologies: ["Java", "JavaFX"],
+        links: [
+            { kind: "videoDemo", url: "https://www.youtube.com/watch?v=ZzMGj6eYikg&t=1s", primary: true }
+        ],
+        text: {
+            en: {
+                summary: "A 2D adventure game with exploration, combat, resources and progressively harder levels.",
+                features: [
+                    "Designed the map and graphical interface in JavaFX.",
+                    "Implemented movement, combat, health, inventory and resource collection.",
+                    "Added enemy movement with basic player tracking and increasing difficulty."
+                ]
+            },
+            sk: {
+                summary: "2D dobrodružná hra s prieskumom, bojom, zdrojmi a postupne náročnejšími úrovňami.",
+                features: [
+                    "Navrhol som mapu a grafické rozhranie pomocou JavaFX.",
+                    "Implementoval som pohyb, boj, zdravie, inventár a zbieranie zdrojov.",
+                    "Pridal som pohyb nepriateľov, základné sledovanie hráča a rastúcu náročnosť."
+                ]
+            },
+            ua: {
+                summary: "2D пригодницька гра з дослідженням, боями, ресурсами та поступовим зростанням складності.",
+                features: [
+                    "Створив карту та графічний інтерфейс за допомогою JavaFX.",
+                    "Реалізував рух, бойову систему, здоров’я, інвентар і збір ресурсів.",
+                    "Додав рух ворогів, базове переслідування гравця та підвищення складності."
+                ]
+            }
+        }
+    },
+    {
+        id: "pac-man",
+        title: "Pac-Man",
+        type: "desktopGame",
+        image: "images/PacMan.png",
+        gallery: ["images/PacMan.png", "images/PC1.png", "images/PC2.png", "images/PC3.png", "images/PC4.png", "images/PC5.png"],
+        technologies: ["Java", "JavaFX"],
+        links: [
+            { kind: "sourceCode", url: "https://github.com/2eugeneparfenov-lab/PacMan", primary: true }
+        ],
+        text: {
+            en: {
+                summary: "A JavaFX recreation of the classic arcade game with collisions, scoring and dynamic difficulty.",
+                features: [
+                    "Implemented keyboard movement and collision detection for walls, dots and ghosts.",
+                    "Created scoring, collectible items and complete game-state handling.",
+                    "Added random ghost movement, basic tracking and increasing game speed."
+                ]
+            },
+            sk: {
+                summary: "JavaFX verzia klasickej arkádovej hry s kolíziami, skóre a dynamickou náročnosťou.",
+                features: [
+                    "Implementoval som ovládanie klávesnicou a kolízie so stenami, bodkami a duchmi.",
+                    "Vytvoril som skóre, zberateľné prvky a kompletnú správu stavu hry.",
+                    "Pridal som náhodný pohyb duchov, základné sledovanie a zvyšovanie rýchlosti."
+                ]
+            },
+            ua: {
+                summary: "JavaFX-версія класичної аркадної гри з колізіями, підрахунком балів і динамічною складністю.",
+                features: [
+                    "Реалізував керування з клавіатури та колізії зі стінами, точками й привидами.",
+                    "Створив систему балів, збір предметів і повну логіку станів гри.",
+                    "Додав випадковий рух привидів, базове переслідування та збільшення швидкості."
+                ]
+            }
+        }
+    },
+    {
+        id: "forest",
+        title: "Forest",
+        type: "unityGame",
+        image: "images/MyGame.jpg",
+        gallery: [],
+        technologies: ["Unity", "C#"],
+        links: [
+            { kind: "videoDemo", url: "https://youtu.be/dtjk4OU6g4E?si=ntgRzvTV8GiTVtgJ", primary: true }
+        ],
+        text: {
+            en: {
+                summary: "A first-person horror game with exploration, enemy pursuit and action-dependent endings.",
+                features: [
+                    "Implemented first-person movement, camera controls and object interaction.",
+                    "Built inventory, collectible items, player health and enemy pursuit mechanics.",
+                    "Added environmental audio, event-based effects and multiple endings."
+                ]
+            },
+            sk: {
+                summary: "Hororová hra z pohľadu prvej osoby s prieskumom, prenasledovaním a zakončeniami podľa rozhodnutí hráča.",
+                features: [
+                    "Implementoval som pohyb z prvej osoby, kameru a interakcie s objektmi.",
+                    "Vytvoril som inventár, zberateľné predmety, zdravie hráča a prenasledovanie nepriateľom.",
+                    "Pridal som zvuky prostredia, udalostné efekty a viacero zakončení."
+                ]
+            },
+            ua: {
+                summary: "Хорор-гра від першої особи з дослідженням, переслідуванням і фіналами, що залежать від дій гравця.",
+                features: [
+                    "Реалізував рух від першої особи, керування камерою та взаємодію з об’єктами.",
+                    "Створив інвентар, колекційні предмети, здоров’я гравця та переслідування ворогом.",
+                    "Додав звуки середовища, подієві ефекти та декілька варіантів фіналу."
+                ]
+            }
+        }
+    },
+    {
+        id: "simple-timer",
+        title: "Simple Timer",
+        type: "desktopApp",
+        image: "images/timer.png",
+        gallery: ["images/timer.png", "images/timer1.png", "images/timer2.png", "images/timer3.png"],
+        technologies: ["Java", "JavaFX"],
+        links: [
+            { kind: "sourceCode", url: "https://github.com/2eugeneparfenov-lab/Simple-Timer", primary: true }
+        ],
+        text: {
+            en: {
+                summary: "A focused desktop countdown application with a clean interface and predictable timer controls.",
+                features: [
+                    "Designed the countdown setup interface using JavaFX controls.",
+                    "Implemented start, reset and automatic remaining-time updates.",
+                    "Added countdown completion handling through event-driven logic."
+                ]
+            },
+            sk: {
+                summary: "Jednoduchá desktopová aplikácia na odpočítavanie s prehľadným rozhraním a spoľahlivým ovládaním.",
+                features: [
+                    "Navrhol som rozhranie na nastavenie odpočítavania pomocou JavaFX.",
+                    "Implementoval som spustenie, reset a automatickú aktualizáciu zostávajúceho času.",
+                    "Pridal som spracovanie dokončenia odpočítavania pomocou udalostí."
+                ]
+            },
+            ua: {
+                summary: "Компактний desktop-застосунок для зворотного відліку з простим інтерфейсом і зрозумілим керуванням.",
+                features: [
+                    "Розробив інтерфейс встановлення часу за допомогою JavaFX.",
+                    "Реалізував запуск, скидання та автоматичне оновлення залишку часу.",
+                    "Додав обробку завершення відліку за допомогою подієвої логіки."
+                ]
+            }
+        }
+    }
+];
 
-window.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "en";
-    setLanguage(savedLang);
-});
+let currentLanguage = localStorage.getItem("portfolio-language") || "en";
+const galleryPositions = new Map();
 
-const langToggleImage = document.querySelector("#lang-toggle img");
+function renderProjects() {
+    const container = document.getElementById("projects-grid");
+    const ui = translations[currentLanguage];
 
-function setLanguage(lang) {
-    document.querySelectorAll("[data-translate]").forEach(el => {
-        const key = el.getAttribute("data-translate");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+    container.innerHTML = projects.map((project) => {
+        const content = project.text[currentLanguage];
+        const classes = `project-card reveal${project.featured ? " featured" : ""}`;
+        const badge = project.badge
+            ? `<span class="project-badge">${escapeHtml(ui[project.badge])}</span>`
+            : project.featured
+                ? `<span class="project-badge">${escapeHtml(ui.featured)}</span>`
+                : "";
+        const galleryButton = project.gallery.length > 1
+            ? `<button class="gallery-button" type="button" data-gallery-id="${project.id}">${escapeHtml(ui.nextScreenshot)} →</button>`
+            : "";
+        const links = project.links.map((link) => `
+            <a class="project-action${link.primary ? " primary" : ""}" href="${link.url}" target="_blank" rel="noopener noreferrer">
+                ${escapeHtml(ui[link.kind])} ↗
+            </a>
+        `).join("");
+
+        return `
+            <article class="${classes}" data-project-id="${project.id}">
+                <div class="project-media">
+                    ${badge}
+                    <img src="${project.image}" alt="${escapeHtml(project.title)} project preview" loading="lazy" data-project-image="${project.id}">
+                    ${galleryButton}
+                </div>
+                <div class="project-content">
+                    <div class="project-heading">
+                        <h3>${escapeHtml(project.title)}</h3>
+                        <span class="project-type">${escapeHtml(ui.types[project.type])}</span>
+                    </div>
+                    <p class="project-summary">${escapeHtml(content.summary)}</p>
+                    <p class="implementation-label">${escapeHtml(ui.implementation)}</p>
+                    <ul class="project-features">
+                        ${content.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}
+                    </ul>
+                    <div class="tech-list" aria-label="Technologies">
+                        ${project.technologies.map((technology) => `<span>${escapeHtml(technology)}</span>`).join("")}
+                    </div>
+                    <div class="project-actions">${links}</div>
+                </div>
+            </article>
+        `;
+    }).join("");
+
+    bindGalleryButtons();
+    observeRevealElements();
+}
+
+function escapeHtml(value) {
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function bindGalleryButtons() {
+    document.querySelectorAll("[data-gallery-id]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const projectId = button.dataset.galleryId;
+            const project = projects.find((item) => item.id === projectId);
+            const image = document.querySelector(`[data-project-image="${projectId}"]`);
+
+            if (!project || !image || project.gallery.length < 2) return;
+
+            const nextPosition = ((galleryPositions.get(projectId) || 0) + 1) % project.gallery.length;
+            galleryPositions.set(projectId, nextPosition);
+            image.src = project.gallery[nextPosition];
+        });
+    });
+}
+
+function setLanguage(language) {
+    if (!translations[language]) return;
+
+    currentLanguage = language;
+    localStorage.setItem("portfolio-language", language);
+    document.documentElement.lang = language === "ua" ? "uk" : language;
+    document.title = translations[language].pageTitle;
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+        if (translations[language][key]) {
+            element.textContent = translations[language][key];
         }
     });
 
-    if(lang === "ua"){
-        langToggleImage.src = "images/Flag_of_Ukraine.svg";
-        langToggleImage.alt = "UA";
-    }else if(lang === "en"){
-        langToggleImage.src = "images/Flag_of_the_U.S..svg.png";
-        langToggleImage.alt = "US";
-    }else if(lang === "sk"){
-        langToggleImage.src = "images/Flag_of_Slovakia.svg.png";
-        langToggleImage.alt = "SK";
+    document.querySelectorAll("[data-language]").forEach((button) => {
+        const isActive = button.dataset.language === language;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    renderProjects();
+}
+
+function observeRevealElements() {
+    const elements = document.querySelectorAll(".reveal:not([data-reveal-observed])");
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        elements.forEach((element) => element.classList.add("visible"));
+        return;
     }
 
-    localStorage.setItem("lang", lang);
-}
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                currentObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
 
-function showDate() {
-    const now = new Date();
-    const formatted = now.toLocaleDateString("uk-UA", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
-    });
-    document.getElementById("current-date").textContent = formatted;
-}
-window.addEventListener("DOMContentLoaded", showDate);
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll('.upper a[href^="#"]:not(#lang-toggle)');
-
-function activateMenuLink() {
-    let currentSectionId = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-
-        if (window.scrollY >= sectionTop - 180 && window.scrollY < sectionTop + sectionHeight - 180) {
-            currentSectionId = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${currentSectionId}`) {
-            link.classList.add("active");
-        }
+    elements.forEach((element) => {
+        element.dataset.revealObserved = "true";
+        observer.observe(element);
     });
 }
 
-window.addEventListener("scroll", activateMenuLink);
-window.addEventListener("load", activateMenuLink);
+function setupNavigation() {
+    const header = document.getElementById("site-header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("main-menu");
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll("main section[id]");
+
+    const closeMenu = () => {
+        menu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+    };
+
+    menuToggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("menu-open", open);
+    });
+
+    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    const updateNavigation = () => {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+        let activeId = "about";
+
+        sections.forEach((section) => {
+            if (window.scrollY >= section.offsetTop - 180) {
+                activeId = section.id;
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+        });
+    };
+
+    window.addEventListener("scroll", updateNavigation, { passive: true });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 780) closeMenu();
+    });
+    updateNavigation();
+}
+
+document.querySelectorAll("[data-language]").forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.language));
+});
+
+document.getElementById("current-year").textContent = new Date().getFullYear();
+setupNavigation();
+setLanguage(currentLanguage);
+observeRevealElements();

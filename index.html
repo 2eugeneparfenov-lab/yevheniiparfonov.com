@@ -2,235 +2,192 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Yevhenii Parfonov, a Java and Spring Boot developer focused on backend applications.">
+    <meta name="theme-color" content="#091416">
+    <title>Yevhenii Parfonov | Java Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- Шапка -->
-<div class="upper">
-    <div class="zoom-on-hover"><a href="#about" data-translate="upper_1"></a></div>
-    <div class="zoom-on-hover"><a href="#projects" data-translate="upper_3"></a></div>
-    <div class="zoom-on-hover"><a href="#skills" data-translate="upper_2"></a></div>
-    <div class="zoom-on-hover"><a href="#contact" data-translate="upper_4"></a></div>
-    <div class="zoom-on-hover">
-        <!-- кнопка відкриття меню мов -->
-        <a href="#" id="lang-toggle">
-            <img src="images/Flag_of_Ukraine.svg" alt="UA" class="lang-icon">
+<header class="site-header" id="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="#about" aria-label="Go to introduction">
+            <span class="brand-mark">YP</span>
+            <span class="brand-text">Yevhenii Parfonov</span>
         </a>
 
-        <!-- приховане меню мов -->
-        <div class="upper-lang" id="lang-menu">
-            <a style="margin-top: 50px" href="?lang=ua" id="ukraine"><img src="images/Flag_of_Ukraine.svg" alt="UA" class="lang-icon1"></a>
-            <a href="?lang=en" id="america"><img src="images/Flag_of_the_U.S..svg.png" alt="US" class="lang-icon1"></a>
-            <a href="?lang=sk" id="slovakia"><img src="images/Flag_of_Slovakia.svg.png" alt="SK" class="lang-icon1"></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+            <span></span><span></span><span></span>
+            <span class="sr-only">Open navigation</span>
+        </button>
+
+        <div class="nav-content" id="main-menu">
+            <div class="nav-links">
+                <a href="#about" data-i18n="navAbout">About</a>
+                <a href="#projects" data-i18n="navProjects">Projects</a>
+                <a href="#skills" data-i18n="navSkills">Skills</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </div>
+
+            <div class="language-switcher" aria-label="Language selection">
+                <button type="button" data-language="en" aria-label="English">EN</button>
+                <button type="button" data-language="sk" aria-label="Slovenčina">SK</button>
+                <button type="button" data-language="ua" aria-label="Українська">UA</button>
+            </div>
         </div>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="hero section" id="about">
+        <div class="section-shell hero-grid">
+            <div class="hero-copy reveal">
+                <p class="eyebrow" data-i18n="heroEyebrow">Java Backend Developer</p>
+                <h1 data-i18n="heroTitle">I build reliable applications with Java and Spring Boot.</h1>
+                <p class="hero-lead" data-i18n="heroLead">
+                    Informatics graduate focused on backend development, database design and practical software products.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects" data-i18n="viewProjects">View projects</a>
+                    <a class="button button-secondary" href="#contact" data-i18n="contactMe">Contact me</a>
+                </div>
+
+                <div class="hero-facts" aria-label="Professional summary">
+                    <div class="fact-card">
+                        <strong>Java</strong>
+                        <span data-i18n="factBackend">Backend focus</span>
+                    </div>
+                    <div class="fact-card">
+                        <strong>Spring Boot</strong>
+                        <span data-i18n="factWeb">Web applications</span>
+                    </div>
+                    <div class="fact-card">
+                        <strong>PostgreSQL</strong>
+                        <span data-i18n="factDatabase">Data modelling</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="profile-card reveal" aria-label="Profile card">
+                <div class="profile-image-wrap">
+                    <img src="images/IMG.JPG" alt="Portrait of Yevhenii Parfonov" class="profile-image">
+                    <span class="availability-dot" aria-hidden="true"></span>
+                </div>
+                <div class="profile-card-content">
+                    <p class="profile-status" data-i18n="profileStatus">Open to junior Java opportunities</p>
+                    <h2>Yevhenii Parfonov</h2>
+                    <p data-i18n="profileLocation">Košice / Bratislava, Slovakia</p>
+                    <div class="profile-links">
+                        <a href="https://github.com/2eugeneparfenov-lab" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="section-shell">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="projectsEyebrow">Selected work</p>
+                    <h2 data-i18n="projectsTitle">Projects</h2>
+                </div>
+                <p data-i18n="projectsIntro">
+                    A concise overview of the products, technical decisions and core functionality I implemented.
+                </p>
+            </div>
+
+            <div class="projects-grid" id="projects-grid"></div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="section-shell">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="skillsEyebrow">Technical profile</p>
+                    <h2 data-i18n="skillsTitle">Skills</h2>
+                </div>
+                <p data-i18n="skillsIntro">
+                    My strongest area is Java backend development, supported by database, frontend and desktop development experience.
+                </p>
+            </div>
+
+            <div class="skills-groups">
+                <article class="skill-group reveal">
+                    <span class="skill-number">01</span>
+                    <h3 data-i18n="backendTitle">Backend</h3>
+                    <div class="skill-tags">
+                        <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JPA</span><span>Hibernate</span><span>REST</span>
+                    </div>
+                </article>
+
+                <article class="skill-group reveal">
+                    <span class="skill-number">02</span>
+                    <h3 data-i18n="databaseTitle">Data & infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span><span>SQL</span><span>Docker</span><span>Entity modelling</span><span>Git</span>
+                    </div>
+                </article>
+
+                <article class="skill-group reveal">
+                    <span class="skill-number">03</span>
+                    <h3 data-i18n="frontendTitle">Frontend</h3>
+                    <div class="skill-tags">
+                        <span>Thymeleaf</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span>
+                    </div>
+                </article>
+
+                <article class="skill-group reveal">
+                    <span class="skill-number">04</span>
+                    <h3 data-i18n="additionalTitle">Additional</h3>
+                    <div class="skill-tags">
+                        <span>JavaFX</span><span>C</span><span>C#</span><span>Unity</span><span>OpenAI API</span><span>Automated testing</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="section-shell contact-panel reveal">
+            <div class="contact-copy">
+                <p class="eyebrow" data-i18n="contactEyebrow">Get in touch</p>
+                <h2 data-i18n="contactTitle">Let’s discuss a development opportunity.</h2>
+                <p data-i18n="contactIntro">
+                    I am interested in junior Java backend and full-stack positions where I can contribute and continue developing professionally.
+                </p>
+            </div>
+
+            <div class="contact-links">
+                <a href="mailto:2eugeneparfenov@gmail.com">
+                    <span>Email</span>
+                    <strong>2eugeneparfenov@gmail.com</strong>
+                </a>
+                <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/" target="_blank" rel="noopener noreferrer">
+                    <span>LinkedIn</span>
+                    <strong>yevhenii-parfonov</strong>
+                </a>
+                <a href="https://github.com/2eugeneparfenov-lab" target="_blank" rel="noopener noreferrer">
+                    <span>GitHub</span>
+                    <strong>2eugeneparfenov-lab</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="section-shell">
+        <p>© <span id="current-year"></span> Yevhenii Parfonov</p>
+        <a href="#about" data-i18n="backToTop">Back to top ↑</a>
     </div>
-    <div class="time-upper" id="current-date"></div>
-</div>
+</footer>
 
-
-
-
-<!-- About -->
-<section id="about">
-    <div class="table1">
-        <h2 data-translate="about_title">Hello, I'm Yevhenii 👋</h2>
-        <div class="photo-text">
-            <img src="images/IMG.JPG" alt="My photo">
-            <div>
-                <p class="about-text" data-translate="about_text"></p>
-                <p class="about-text" data-translate="about_text1"></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <div class="table1 reveal">
-        <h2 data-translate="projects_title" style="margin-bottom: 80px">Projects</h2>
-
-        <div class="project-item">
-            <img src="images/Elen.jpg" alt="Project Elen">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -100px">Alien Fighter</h3>
-                <p class="about-text" data-translate="project_text_1"></p>
-                <p class="about-text" data-translate="tec1"></p>
-                <button onclick="window.open('https://www.youtube.com/watch?v=ZzMGj6eYikg&t=1s')" class="btn">View Project</button>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="images/SAL.png" alt="Slide-a-Lama" id="Lama">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -100px">Slide-a-Lama</h3>
-                <p class="about-text" data-translate="project_text_2"></p>
-                <p class="about-text" data-translate="tec"></p>
-                <button class="btn" onclick="nextImage1()">Next photo</button>
-                <button onclick="window.open('https://www.youtube.com/watch?v=uUaL2kCP9lU')" class="btn" style="margin-left: 20px">View Project</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://github.com/2eugeneparfenov-lab/slide-a-lama', '_blank')">
-                    Git
-                </button>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="images/SE.png" alt="Solar Eclipse" id="Eclipse">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -100px">Solar Eclipse</h3>
-                <p class="about-text" data-translate="project_text_3"></p>
-                <p class="about-text" data-translate="tec"></p>
-                <button class="btn" onclick="nextImage()">Next photo</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://www.youtube.com/watch?v=XP8CPtc-eKM&t=6s', '_blank')">
-                    View Project
-                </button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://github.com/2eugeneparfenov-lab/Solar-Eclipse', '_blank')">
-                    Git
-                </button>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="images/PacMan.png" alt="PacMan" id="PacMan">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -100px">Pac-Man</h3>
-                <p class="about-text" data-translate="project_text_4"></p>
-                <p class="about-text" data-translate="tec1"></p>
-                <button class="btn" onclick="nextImagePacMan()">Next photo</button>
-                <button onclick="window.open('aaa')" class="btn" style="margin-left: 20px">View Project</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://github.com/2eugeneparfenov-lab/PacMan', '_blank')">
-                    Git
-                </button>
-            </div>
-
-        </div>
-
-        <div class="project-item">
-            <img src="images/timer.png" alt="SmartClock" id="SmartClock">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -100px">Simple Timer</h3>
-                <p class="about-text" data-translate="project_text_6"></p>
-                <p class="about-text" data-translate="tec1"></p>
-                <button class="btn" onclick="nextImageTimer()">Next photo</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://www.youtube.com/watch?v=-eKM&t=6s', '_blank')">
-                    View Project
-                </button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://github.com/2eugeneparfenov-lab/Simple-Timer', '_blank')">
-                    Git
-                </button>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="images/img_1.png" alt="BrainForge" id="BrainForge">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -50px">BrainForge</h3>
-                <p class="about-text" data-translate="project_text_5"></p>
-                <p class="about-text" data-translate="tec_bp"></p>
-                <button class="btn" onclick="nextImageBrainForge()">Next photo</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://www.youtube.com/watch?v=uUaL2kCP9lU', '_blank')">
-                    View Project
-                </button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://git.kpi.fei.tuke.sk/kpi-zp/2026/bp.yevhenii.parfonov/workspace/umela-inteligencia-vo-vzdelavani-projekt', '_blank')">
-                    Git
-                </button>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="images/MyGame.jpg" alt="Forest" id="Forest">
-            <div class="project-text">
-                <h3 style="font-size: 24px; color: gold; margin-top: -80px">Unity Game</h3>
-                <p class="about-text" data-translate="project_text_7"></p>
-                <p class="about-text" data-translate="tecGame"></p>
-                <button class="btn">Next photo</button>
-                <button class="btn" style="margin-left: 20px"
-                        onclick="window.open('https://youtu.be/dtjk4OU6g4E?si=ntgRzvTV8GiTVtgJ', '_blank')">
-                    View Project
-                </button>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills -->
-<section id="skills">
-    <div class="table1 reveal">
-        <h2 data-translate="skills_title">My Skills</h2>
-
-        <div class="photo-text1">
-            <img src="images/face.jpg" alt="Skills">
-            <p class="about-text" data-translate="skills_intro"></p>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skills-container">
-                <img class="skills-image" src="images/Java.png" alt="Java image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/C.png" alt="C image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/spring-logo.png" alt="SpringBoot image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/PostgresSQL.png" alt="SQL image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/HTML5.png" alt="HTML image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/CSS3.png" alt="CSS image">
-            </div>
-            <div class="skills-container">
-                <img class="skills-image" src="images/JavaScript.png" alt="JavaScript image">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Contact -->
-<section id="contact">
-    <div class="contact-box reveal">
-        <h2 data-translate="contact_title">Contacts</h2>
-
-        <div class="contact-item">
-            <span>Email:</span>
-            <a href="mailto:2eugeneparfenov@gmail.com">2eugeneparfenov@gmail.com</a>
-        </div>
-
-        <div class="contact-item">
-            <span>LinkedIn:</span>
-            <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/" target="_blank" rel="noopener noreferrer">
-                yevhenii-parfonov
-            </a>
-        </div>
-
-        <div class="contact-item">
-            <span>GitHub:</span>
-            <a href="https://github.com/2eugeneparfenov-lab" target="_blank" rel="noopener noreferrer">
-                2eugeneparfenov-lab
-            </a>
-        </div>
-    </div>
-</section>
-
-<script src="./main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
-
-
-
-
