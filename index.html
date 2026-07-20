@@ -2,192 +2,471 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Yevhenii Parfonov, a Java and Spring Boot developer focused on backend applications.">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio of Yevhenii Parfonov, an Informatics graduate with experience in Java, C, Python, backend, web, desktop and database development.">
+
     <meta name="theme-color" content="#091416">
-    <title>Yevhenii Parfonov | Java Developer</title>
+
+    <title>Yevhenii Parfonov | Software Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
+
+<a class="skip-link" href="#main-content">
+    Skip to content
+</a>
 
 <header class="site-header" id="site-header">
+
     <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="#about" aria-label="Go to introduction">
+
+        <a class="brand"
+           href="#about"
+           aria-label="Go to introduction">
+
             <span class="brand-mark">YP</span>
             <span class="brand-text">Yevhenii Parfonov</span>
         </a>
 
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
-            <span></span><span></span><span></span>
-            <span class="sr-only">Open navigation</span>
+        <button class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span class="sr-only">
+                Open navigation
+            </span>
         </button>
 
         <div class="nav-content" id="main-menu">
+
             <div class="nav-links">
-                <a href="#about" data-i18n="navAbout">About</a>
-                <a href="#projects" data-i18n="navProjects">Projects</a>
-                <a href="#skills" data-i18n="navSkills">Skills</a>
-                <a href="#contact" data-i18n="navContact">Contact</a>
+                <a href="#about" data-i18n="navAbout">
+                    About
+                </a>
+
+                <a href="#projects" data-i18n="navProjects">
+                    Projects
+                </a>
+
+                <a href="#skills" data-i18n="navSkills">
+                    Skills
+                </a>
+
+                <a href="#contact" data-i18n="navContact">
+                    Contact
+                </a>
             </div>
 
-            <div class="language-switcher" aria-label="Language selection">
-                <button type="button" data-language="en" aria-label="English">EN</button>
-                <button type="button" data-language="sk" aria-label="Slovenčina">SK</button>
-                <button type="button" data-language="ua" aria-label="Українська">UA</button>
+            <div class="language-switcher"
+                 aria-label="Language selection">
+
+                <button type="button"
+                        data-language="en"
+                        aria-label="English">
+                    EN
+                </button>
+
+                <button type="button"
+                        data-language="sk"
+                        aria-label="Slovenčina">
+                    SK
+                </button>
+
+                <button type="button"
+                        data-language="ua"
+                        aria-label="Українська">
+                    UA
+                </button>
+
             </div>
+
         </div>
+
     </nav>
+
 </header>
 
 <main id="main-content">
+
+    <!-- About / Hero -->
     <section class="hero section" id="about">
+
         <div class="section-shell hero-grid">
+
             <div class="hero-copy reveal">
-                <p class="eyebrow" data-i18n="heroEyebrow">Java Backend Developer</p>
-                <h1 data-i18n="heroTitle">I build reliable applications with Java and Spring Boot.</h1>
-                <p class="hero-lead" data-i18n="heroLead">
-                    Informatics graduate focused on backend development, database design and practical software products.
+
+                <p class="eyebrow"
+                   data-i18n="heroEyebrow">
+                    Software Developer & Informatics Graduate
+                </p>
+
+                <h1 data-i18n="heroTitle">
+                    I create practical software across backend, web, desktop and data-oriented projects.
+                </h1>
+
+                <p class="hero-lead"
+                   data-i18n="heroLead">
+                    I have practical experience with Java, Spring Boot,
+                    PostgreSQL and C, as well as basic experience with
+                    Python and the scikit-learn library.
                 </p>
 
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#projects" data-i18n="viewProjects">View projects</a>
-                    <a class="button button-secondary" href="#contact" data-i18n="contactMe">Contact me</a>
+
+                    <a class="button button-primary"
+                       href="#projects"
+                       data-i18n="viewProjects">
+                        View projects
+                    </a>
+
+                    <a class="button button-secondary"
+                       href="#contact"
+                       data-i18n="contactMe">
+                        Contact me
+                    </a>
+
                 </div>
 
-                <div class="hero-facts" aria-label="Professional summary">
+                <div class="hero-facts"
+                     aria-label="Technical summary">
+
                     <div class="fact-card">
-                        <strong>Java</strong>
-                        <span data-i18n="factBackend">Backend focus</span>
+                        <strong>Java & C</strong>
+                        <span data-i18n="factBackend">
+                            Core programming
+                        </span>
                     </div>
+
                     <div class="fact-card">
-                        <strong>Spring Boot</strong>
-                        <span data-i18n="factWeb">Web applications</span>
+                        <strong>Spring Boot & SQL</strong>
+                        <span data-i18n="factWeb">
+                            Backend and data
+                        </span>
                     </div>
+
                     <div class="fact-card">
-                        <strong>PostgreSQL</strong>
-                        <span data-i18n="factDatabase">Data modelling</span>
+                        <strong>Python</strong>
+                        <span data-i18n="factDatabase">
+                            scikit-learn basics
+                        </span>
                     </div>
+
                 </div>
+
             </div>
 
-            <aside class="profile-card reveal" aria-label="Profile card">
+            <aside class="profile-card reveal"
+                   aria-label="Profile card">
+
                 <div class="profile-image-wrap">
-                    <img src="images/IMG.JPG" alt="Portrait of Yevhenii Parfonov" class="profile-image">
-                    <span class="availability-dot" aria-hidden="true"></span>
+
+                    <img src="images/IMG.JPG"
+                         alt="Portrait of Yevhenii Parfonov"
+                         class="profile-image">
+
+                    <span class="availability-dot"
+                          aria-hidden="true">
+                    </span>
+
                 </div>
+
                 <div class="profile-card-content">
-                    <p class="profile-status" data-i18n="profileStatus">Open to junior Java opportunities</p>
+
+                    <p class="profile-status"
+                       data-i18n="profileStatus">
+                        Informatics graduate with a broad technical background
+                    </p>
+
                     <h2>Yevhenii Parfonov</h2>
-                    <p data-i18n="profileLocation">Košice / Bratislava, Slovakia</p>
+
+                    <p data-i18n="profileLocation">
+                        Košice / Bratislava, Slovakia
+                    </p>
+
                     <div class="profile-links">
-                        <a href="https://github.com/2eugeneparfenov-lab" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+                        <a href="https://github.com/2eugeneparfenov-lab"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+
                     </div>
+
                 </div>
+
             </aside>
+
         </div>
+
     </section>
 
+    <!-- Projects -->
     <section class="section" id="projects">
+
         <div class="section-shell">
+
             <div class="section-heading reveal">
+
                 <div>
-                    <p class="eyebrow" data-i18n="projectsEyebrow">Selected work</p>
-                    <h2 data-i18n="projectsTitle">Projects</h2>
+
+                    <p class="eyebrow"
+                       data-i18n="projectsEyebrow">
+                        Practical experience
+                    </p>
+
+                    <h2 data-i18n="projectsTitle">
+                        Projects
+                    </h2>
+
                 </div>
+
                 <p data-i18n="projectsIntro">
-                    A concise overview of the products, technical decisions and core functionality I implemented.
+                    A selection of web, backend, desktop and game projects
+                    demonstrating the technologies and functionality I have implemented.
                 </p>
+
             </div>
 
-            <div class="projects-grid" id="projects-grid"></div>
+            <div class="projects-grid"
+                 id="projects-grid">
+            </div>
+
         </div>
+
     </section>
 
+    <!-- Skills -->
     <section class="section" id="skills">
+
         <div class="section-shell">
+
             <div class="section-heading reveal">
+
                 <div>
-                    <p class="eyebrow" data-i18n="skillsEyebrow">Technical profile</p>
-                    <h2 data-i18n="skillsTitle">Skills</h2>
+
+                    <p class="eyebrow"
+                       data-i18n="skillsEyebrow">
+                        Technical background
+                    </p>
+
+                    <h2 data-i18n="skillsTitle">
+                        Skills
+                    </h2>
+
                 </div>
+
                 <p data-i18n="skillsIntro">
-                    My strongest area is Java backend development, supported by database, frontend and desktop development experience.
+                    My technical background includes software development,
+                    backend systems, databases, web interfaces, desktop
+                    applications and basic data analysis.
                 </p>
+
             </div>
 
             <div class="skills-groups">
+
+                <!-- Programming languages -->
                 <article class="skill-group reveal">
-                    <span class="skill-number">01</span>
-                    <h3 data-i18n="backendTitle">Backend</h3>
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+                    <h3 data-i18n="backendTitle">
+                        Programming languages
+                    </h3>
+
                     <div class="skill-tags">
-                        <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JPA</span><span>Hibernate</span><span>REST</span>
+                        <span>Java</span>
+                        <span>C</span>
+                        <span>Python</span>
+                        <span>C#</span>
+                        <span>JavaScript</span>
+                        <span>OOP</span>
                     </div>
+
                 </article>
 
+                <!-- Backend and databases -->
                 <article class="skill-group reveal">
-                    <span class="skill-number">02</span>
-                    <h3 data-i18n="databaseTitle">Data & infrastructure</h3>
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+                    <h3 data-i18n="databaseTitle">
+                        Backend & databases
+                    </h3>
+
                     <div class="skill-tags">
-                        <span>PostgreSQL</span><span>SQL</span><span>Docker</span><span>Entity modelling</span><span>Git</span>
+                        <span>Spring Boot</span>
+                        <span>Spring Security</span>
+                        <span>REST API</span>
+                        <span>JPA</span>
+                        <span>Hibernate</span>
+                        <span>PostgreSQL</span>
+                        <span>SQL</span>
                     </div>
+
                 </article>
 
+                <!-- Web and desktop -->
                 <article class="skill-group reveal">
-                    <span class="skill-number">03</span>
-                    <h3 data-i18n="frontendTitle">Frontend</h3>
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+                    <h3 data-i18n="frontendTitle">
+                        Web & desktop applications
+                    </h3>
+
                     <div class="skill-tags">
-                        <span>Thymeleaf</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span>
+                        <span>Thymeleaf</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>JavaFX</span>
+                        <span>Responsive UI</span>
                     </div>
+
                 </article>
 
+                <!-- Tools and additional technologies -->
                 <article class="skill-group reveal">
-                    <span class="skill-number">04</span>
-                    <h3 data-i18n="additionalTitle">Additional</h3>
+
+                    <span class="skill-number">
+                        04
+                    </span>
+
+                    <h3 data-i18n="additionalTitle">
+                        Tools & additional technologies
+                    </h3>
+
                     <div class="skill-tags">
-                        <span>JavaFX</span><span>C</span><span>C#</span><span>Unity</span><span>OpenAI API</span><span>Automated testing</span>
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>Unity</span>
+                        <span>scikit-learn</span>
+                        <span>OpenAI API</span>
+                        <span>Automated testing</span>
+                        <span>Database modelling</span>
                     </div>
+
                 </article>
+
             </div>
+
         </div>
+
     </section>
 
+    <!-- Contact -->
     <section class="section contact-section" id="contact">
+
         <div class="section-shell contact-panel reveal">
+
             <div class="contact-copy">
-                <p class="eyebrow" data-i18n="contactEyebrow">Get in touch</p>
-                <h2 data-i18n="contactTitle">Let’s discuss a development opportunity.</h2>
-                <p data-i18n="contactIntro">
-                    I am interested in junior Java backend and full-stack positions where I can contribute and continue developing professionally.
+
+                <p class="eyebrow"
+                   data-i18n="contactEyebrow">
+                    Contact
                 </p>
+
+                <h2 data-i18n="contactTitle">
+                    Let’s connect.
+                </h2>
+
+                <p data-i18n="contactIntro">
+                    This portfolio presents my technical background,
+                    completed projects and the technologies I have worked with.
+                    You can contact me by email or through LinkedIn.
+                </p>
+
             </div>
 
             <div class="contact-links">
+
                 <a href="mailto:2eugeneparfenov@gmail.com">
+
                     <span>Email</span>
-                    <strong>2eugeneparfenov@gmail.com</strong>
+
+                    <strong>
+                        2eugeneparfenov@gmail.com
+                    </strong>
+
                 </a>
-                <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/" target="_blank" rel="noopener noreferrer">
+
+                <a href="https://www.linkedin.com/in/yevhenii-parfonov-6171813a0/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     <span>LinkedIn</span>
-                    <strong>yevhenii-parfonov</strong>
+
+                    <strong>
+                        yevhenii-parfonov
+                    </strong>
+
                 </a>
-                <a href="https://github.com/2eugeneparfenov-lab" target="_blank" rel="noopener noreferrer">
+
+                <a href="https://github.com/2eugeneparfenov-lab"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
                     <span>GitHub</span>
-                    <strong>2eugeneparfenov-lab</strong>
+
+                    <strong>
+                        2eugeneparfenov-lab
+                    </strong>
+
                 </a>
+
             </div>
+
         </div>
+
     </section>
+
 </main>
 
 <footer class="site-footer">
+
     <div class="section-shell">
-        <p>© <span id="current-year"></span> Yevhenii Parfonov</p>
-        <a href="#about" data-i18n="backToTop">Back to top ↑</a>
+
+        <p>
+            © <span id="current-year"></span>
+            Yevhenii Parfonov
+        </p>
+
+        <a href="#about"
+           data-i18n="backToTop">
+            Back to top ↑
+        </a>
+
     </div>
+
 </footer>
 
 <script src="main.js"></script>
+
 </body>
 </html>

@@ -1,34 +1,45 @@
 const translations = {
     en: {
-        pageTitle: "Yevhenii Parfonov | Java Developer",
+        pageTitle: "Yevhenii Parfonov | Software Portfolio",
+
         navAbout: "About",
         navProjects: "Projects",
         navSkills: "Skills",
         navContact: "Contact",
-        heroEyebrow: "Java Backend Developer",
-        heroTitle: "I build reliable applications with Java and Spring Boot.",
-        heroLead: "Informatics graduate focused on backend development, database design and practical software products.",
+
+        heroEyebrow: "Informatics Graduate",
+        heroTitle: "Hi, I'm Yevhenii.",
+        heroLead: "I am an Informatics graduate with practical experience in software development, backend systems, databases and desktop applications.",
+        profileStatus: "Open to junior IT opportunities",
+
         viewProjects: "View projects",
         contactMe: "Contact me",
-        factBackend: "Backend focus",
-        factWeb: "Web applications",
-        factDatabase: "Data modelling",
-        profileStatus: "Open to junior Java opportunities",
-        profileLocation: "Slovakia",
-        projectsEyebrow: "Selected work",
+
+        factBackend: "Core programming",
+        factWeb: "Backend and databases",
+        factDatabase: "Data and machine learning basics",
+
+        profileLocation: "Košice, Slovakia · Remote EU/Ukraine",
+
+        projectsEyebrow: "Practical experience",
         projectsTitle: "Projects",
-        projectsIntro: "A concise overview of the products, technical decisions and core functionality I implemented.",
-        skillsEyebrow: "Technical profile",
+        projectsIntro: "A selection of projects demonstrating the technologies, technical decisions and functionality I have implemented.",
+
+        skillsEyebrow: "Technical background",
         skillsTitle: "Skills",
-        skillsIntro: "My strongest area is Java backend development, supported by database, frontend and desktop development experience.",
-        backendTitle: "Backend",
-        databaseTitle: "Data & infrastructure",
-        frontendTitle: "Frontend",
-        additionalTitle: "Additional",
-        contactEyebrow: "Get in touch",
-        contactTitle: "Let’s discuss a development opportunity.",
-        contactIntro: "I am interested in junior Java backend and full-stack positions where I can contribute and continue developing professionally.",
+        skillsIntro: "My technical background includes software development, backend systems, databases, web interfaces, desktop applications and basic data analysis.",
+
+        backendTitle: "Programming languages",
+        databaseTitle: "Backend & databases",
+        frontendTitle: "Web & desktop applications",
+        additionalTitle: "Tools & additional technologies",
+
+        contactEyebrow: "Contact",
+        contactTitle: "Let’s connect.",
+        contactIntro: "This portfolio presents my technical background, completed projects and the technologies I have worked with. You can contact me by email or through LinkedIn.",
+
         backToTop: "Back to top ↑",
+
         implementation: "Key implementation",
         nextScreenshot: "Next screenshot",
         liveDemo: "Live demo",
@@ -36,44 +47,57 @@ const translations = {
         sourceCode: "Source code",
         featured: "Featured project",
         thesis: "Bachelor’s thesis",
+
         types: {
             platform: "Web platform",
             webGame: "Browser game",
             desktopGame: "Desktop game",
-            desktopApp: "Desktop app",
+            desktopApp: "Desktop application",
             unityGame: "Unity game"
         }
     },
+
     sk: {
-        pageTitle: "Yevhenii Parfonov | Java vývojár",
+        pageTitle: "Yevhenii Parfonov | Softvérové portfólio",
+
         navAbout: "O mne",
         navProjects: "Projekty",
         navSkills: "Zručnosti",
         navContact: "Kontakt",
-        heroEyebrow: "Java Backend Developer",
-        heroTitle: "Tvorím spoľahlivé aplikácie v Jave a Spring Boote.",
-        heroLead: "Absolvent informatiky so zameraním na backendový vývoj, návrh databáz a praktické softvérové produkty.",
+
+        heroEyebrow: "Absolvent informatiky",
+        heroTitle: "Ahoj, som Yevhenii.",
+        heroLead: "Som absolvent informatiky s praktickými skúsenosťami vo vývoji softvéru, backendových systémoch, databázach a desktopových aplikáciách.",
+        profileStatus: "Otvorený juniorným príležitostiam v IT",
+
         viewProjects: "Zobraziť projekty",
         contactMe: "Kontaktovať ma",
-        factBackend: "Backendové zameranie",
-        factWeb: "Webové aplikácie",
-        factDatabase: "Dátové modelovanie",
-        profileStatus: "Otvorený junior Java príležitostiam",
-        profileLocation: "Slovensko",
-        projectsEyebrow: "Vybrané práce",
+
+        factBackend: "Základy programovania",
+        factWeb: "Backend a databázy",
+        factDatabase: "Dáta a základy strojového učenia",
+
+        profileLocation: "Košice, Slovensko · Práca na diaľku v EÚ/Ukrajine",
+
+        projectsEyebrow: "Praktické skúsenosti",
         projectsTitle: "Projekty",
-        projectsIntro: "Stručný prehľad produktov, technických rozhodnutí a hlavných funkcií, ktoré som implementoval.",
-        skillsEyebrow: "Technický profil",
+        projectsIntro: "Výber projektov, ktoré prezentujú použité technológie, technické rozhodnutia a implementovanú funkcionalitu.",
+
+        skillsEyebrow: "Technické zameranie",
         skillsTitle: "Zručnosti",
-        skillsIntro: "Mojou najsilnejšou oblasťou je Java backend, doplnený skúsenosťami s databázami, frontendom a desktopovými aplikáciami.",
-        backendTitle: "Backend",
-        databaseTitle: "Dáta a infraštruktúra",
-        frontendTitle: "Frontend",
-        additionalTitle: "Ďalšie technológie",
+        skillsIntro: "Moje technické skúsenosti zahŕňajú vývoj softvéru, backendové systémy, databázy, webové rozhrania, desktopové aplikácie a základy analýzy dát.",
+
+        backendTitle: "Programovacie jazyky",
+        databaseTitle: "Backend a databázy",
+        frontendTitle: "Webové a desktopové aplikácie",
+        additionalTitle: "Nástroje a ďalšie technológie",
+
         contactEyebrow: "Kontakt",
-        contactTitle: "Poďme prediskutovať pracovnú príležitosť.",
-        contactIntro: "Mám záujem o junior Java backend alebo full-stack pozície, na ktorých môžem prispieť a ďalej sa profesionálne rozvíjať.",
+        contactTitle: "Zostaňme v kontakte.",
+        contactIntro: "Toto portfólio prezentuje moje technické skúsenosti, vytvorené projekty a technológie, s ktorými som pracoval. Kontaktovať ma môžete prostredníctvom emailu alebo LinkedIn.",
+
         backToTop: "Späť hore ↑",
+
         implementation: "Kľúčová implementácia",
         nextScreenshot: "Ďalší obrázok",
         liveDemo: "Živé demo",
@@ -81,6 +105,7 @@ const translations = {
         sourceCode: "Zdrojový kód",
         featured: "Hlavný projekt",
         thesis: "Bakalárska práca",
+
         types: {
             platform: "Webová platforma",
             webGame: "Webová hra",
@@ -89,36 +114,47 @@ const translations = {
             unityGame: "Unity hra"
         }
     },
+
     ua: {
-        pageTitle: "Yevhenii Parfonov | Java розробник",
+        pageTitle: "Yevhenii Parfonov | Портфоліо розробника",
+
         navAbout: "Про мене",
         navProjects: "Проєкти",
         navSkills: "Навички",
         navContact: "Контакти",
-        heroEyebrow: "Java Backend Developer",
-        heroTitle: "Я створюю надійні застосунки на Java та Spring Boot.",
-        heroLead: "Випускник інформатики, зосереджений на backend-розробці, проєктуванні баз даних і практичних програмних продуктах.",
+
+        heroEyebrow: "Випускник інформатики",
+        heroTitle: "Привіт, я Євгеній.",
+        heroLead: "Я випускник спеціальності «Інформатика» з практичним досвідом у розробці програмного забезпечення, backend-систем, баз даних і desktop-застосунків.",
+        profileStatus: "Відкритий до junior-позицій в IT",
         viewProjects: "Переглянути проєкти",
         contactMe: "Зв’язатися",
-        factBackend: "Backend-напрямок",
-        factWeb: "Вебзастосунки",
-        factDatabase: "Моделювання даних",
-        profileStatus: "Відкритий до junior Java пропозицій",
-        profileLocation: "Словаччина",
-        projectsEyebrow: "Вибрані роботи",
+
+        factBackend: "Основи програмування",
+        factWeb: "Backend і бази даних",
+        factDatabase: "Дані та основи машинного навчання",
+
+        profileLocation: "Кошице, Словаччина · Віддалена робота в ЄС/Україні",
+
+        projectsEyebrow: "Практичний досвід",
         projectsTitle: "Проєкти",
-        projectsIntro: "Стислий огляд продуктів, технічних рішень і ключових функцій, які я реалізував.",
-        skillsEyebrow: "Технічний профіль",
+        projectsIntro: "Добірка проєктів, що демонструють використані технології, технічні рішення та реалізовані функції.",
+
+        skillsEyebrow: "Технічна підготовка",
         skillsTitle: "Навички",
-        skillsIntro: "Мій основний напрямок — Java backend, доповнений досвідом роботи з базами даних, frontend і desktop-застосунками.",
-        backendTitle: "Backend",
-        databaseTitle: "Дані та інфраструктура",
-        frontendTitle: "Frontend",
-        additionalTitle: "Додаткові технології",
+        skillsIntro: "Мої технічні навички охоплюють розробку програмного забезпечення, backend-системи, бази даних, web-інтерфейси, desktop-застосунки та основи аналізу даних.",
+
+        backendTitle: "Мови програмування",
+        databaseTitle: "Backend і бази даних",
+        frontendTitle: "Web і desktop-застосунки",
+        additionalTitle: "Інструменти та додаткові технології",
+
         contactEyebrow: "Контакти",
-        contactTitle: "Обговорімо можливість співпраці.",
-        contactIntro: "Мене цікавлять junior Java backend і full-stack позиції, де я зможу бути корисним та професійно розвиватися.",
+        contactTitle: "Залишаймося на зв’язку.",
+        contactIntro: "Це портфоліо представляє мої технічні навички, завершені проєкти та технології, з якими я працював. Зі мною можна зв’язатися через електронну пошту або LinkedIn.",
+
         backToTop: "Повернутися вгору ↑",
+
         implementation: "Ключова реалізація",
         nextScreenshot: "Наступне зображення",
         liveDemo: "Демо",
@@ -126,6 +162,7 @@ const translations = {
         sourceCode: "Вихідний код",
         featured: "Головний проєкт",
         thesis: "Бакалаврська робота",
+
         types: {
             platform: "Вебплатформа",
             webGame: "Браузерна гра",
