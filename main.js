@@ -32,6 +32,7 @@ const translations = {
         backendTitle: "Programming languages",
         databaseTitle: "Backend & databases",
         frontendTitle: "Web & desktop applications",
+        testingTitle: "Software testing & QA",
         additionalTitle: "Tools & additional technologies",
 
         contactEyebrow: "Contact",
@@ -90,6 +91,7 @@ const translations = {
         backendTitle: "Programovacie jazyky",
         databaseTitle: "Backend a databázy",
         frontendTitle: "Webové a desktopové aplikácie",
+        testingTitle: "Testovanie softvéru & QA",
         additionalTitle: "Nástroje a ďalšie technológie",
 
         contactEyebrow: "Kontakt",
@@ -147,6 +149,7 @@ const translations = {
         backendTitle: "Мови програмування",
         databaseTitle: "Backend і бази даних",
         frontendTitle: "Web і desktop-застосунки",
+        testingTitle: "Тестування ПЗ та QA",
         additionalTitle: "Інструменти та додаткові технології",
 
         contactEyebrow: "Контакти",

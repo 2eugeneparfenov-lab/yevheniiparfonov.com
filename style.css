@@ -472,6 +472,8 @@ button {
     gap: 22px;
 }
 
+
+
 .project-card {
     position: relative;
     min-width: 0;
@@ -494,7 +496,7 @@ button {
 .project-card.featured {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+    grid-template-columns: minmax(0, 1.5fr) minmax(340px, 0.85fr);
 }
 
 .project-media {
@@ -515,6 +517,12 @@ button {
     object-fit: cover;
     transition: transform 0.55s ease;
 }
+
+.project-card[data-project-id="brainforge"] .project-media img {
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
 
 .project-card:hover .project-media img {
     transform: scale(1.025);
